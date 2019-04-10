@@ -45,13 +45,13 @@ void setup() {
   
   getQuote();                                                                                       //Call the getQuote function.
 
-  getFact();                                                                                        //Call the getFact function.
-
   Serial.println();                                                                                 //Print this in the serial monitor.
   Serial.println("RANDOM QUOTE");                                                                   //Print this in the serial monitor.
   Serial.println("\"" + randomQuote.text + "\"");                                                   //Retrieve the random quote and print this in the serial monitor.
   Serial.println(" – " + randomQuote.author);                                                       //Retrieve the author and print this in the serial monitor.
   Serial.println();                                                                                 //Print this in the serial monitor.
+  
+  getFact();                                                                                        //Call the getFact function.
   
   Serial.println("RANDOM NUMBER FACT");                                                             //Print this in the serial monitor.
   Serial.println("Number: " + randomFact.number);                                                   //Retrieve the random number and print this in the serial monitor.
