@@ -52,7 +52,8 @@ void setup() {
   Serial.println();                                                                                 //Print this in the serial monitor.
   
   getFact();                                                                                        //Call the getFact function.
-  
+
+  Serial.println();                                                                                 //Print this in the serial monitor.
   Serial.println("RANDOM NUMBER FACT");                                                             //Print this in the serial monitor.
   Serial.println("Number: " + randomFact.number);                                                   //Retrieve the random number and print this in the serial monitor.
   Serial.println("Fact: " + randomFact.text);                                                       //Retrieve the fact and print this in the serial monitor.
@@ -75,7 +76,6 @@ void getQuote() {                                                               
       DynamicJsonBuffer jsonBuffer;                                                       //Create a dynamic JSON buffer.
       String payload = theClient.getString();                                             //Store what the mini browser gives back as one big string.
       Serial.println("Parsing QUOTE...");                                                 //Print this in the serial monitor.
-      Serial.println();                                                                   //Print this in the serial monitor.
       JsonObject& root = jsonBuffer.parse(payload);                                       //Parse the string.
 
       if (!root.success()) {                                                              //If the parsing was not successful, do this.
